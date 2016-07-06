@@ -1,0 +1,56 @@
+ext {
+    signingConfig = [
+            storePassword: "zhilily",
+            keyAlias     : "56iqkm",
+            keyPassword  : "zhilily"
+    ]
+    android = [
+            compileSdkVersion: 24,
+            targetSdkVersion : 24,
+            minSdkVersion    : 19,
+            buildToolsVersion: "24.0.0",
+            VERSION_NAME     : "1.0.0",
+            VERSION_CODE     : 1
+    ]
+    libraryVersion = [
+            "support" : "24.0.0",
+            "retrofit": "2.1.0",
+            "okhttp"  : "3.3.1",
+            "agera"   : "1.1.0"
+    ]
+    library = [
+            "support-v4"                : "com.android.support:support-v4:${libraryVersion.support}",
+            "support-v7"                : "com.android.support:appcompat-v7:${libraryVersion.support}",
+            "support-recyclerview"      : "com.android.support:recyclerview-v7:${libraryVersion.support}",
+            "support-cardview"          : "com.android.support:cardview-v7:${libraryVersion.support}",
+            "support-design"            : "com.android.support:design:${libraryVersion.support}",
+            "support-percent"           : "com.android.support:percent:${libraryVersion.support}",
+            "constraint-layout"         : "com.android.support.constraint:constraint-layout:1.0.0-alpha2",
+            "flexbox"                   : "com.google.android:flexbox:0.2.2",
+            "agera"                     : "com.google.android.agera:agera:${libraryVersion.agera}",
+            "retrofit"                  : "com.squareup.retrofit2:retrofit:${libraryVersion.retrofit}",
+            "retrofit-converter-scalars": "com.squareup.retrofit2:converter-scalars:${libraryVersion.retrofit}",
+            "retrofit-converter-gson"   : "com.squareup.retrofit2:converter-gson:${libraryVersion.retrofit}",
+            "retrofit-converter-moshi"  : "com.squareup.retrofit2:converter-moshi:${libraryVersion.retrofit}",
+            "retrofit-rxjava"           : "com.squareup.retrofit2:adapter-rxjava:${libraryVersion.retrofit}",
+            "okhttp-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${libraryVersion.okhttp}",
+            "butterknife"               : "com.jakewharton:butterknife:7.0.1",
+            "leakcanary-android"        : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+            "leakcanary-android-no-op"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+            "blockcanary-android"       : "com.github.moduth:blockcanary-android:1.2.1",
+            "blockcanary-android-no-op" : "com.github.moduth:blockcanary-no-op:1.2.1",
+            "picasso"                   : "com.squareup.picasso:picasso:2.5.2",
+            "fresco"                    : "com.facebook.fresco:fresco:0.9.0",
+            "gson"                      : "com.google.code.gson:gson:2.6.2",
+            "fastjson"                  : "com.alibaba:fastjson:1.2.7",
+            "rxandroid"                 : "io.reactivex:rxandroid:1.2.1",
+            "rxjava"                    : "io.reactivex:rxjava:1.1.6",
+            "eventbus"                  : "org.simple:androideventbus:1.0.5.1",
+            "emojicon"                  : "com.rockerhieu.emojicon:library:1.3.2",
+            "zxing-android-core"        : "com.google.zxing:android-core:3.2.1",
+            "zxing-core"                : "com.google.zxing:core:3.2.1",
+            "parceler-api"              : "org.parceler:parceler-api:1.0.3",
+            "material-design-dimens"    : "com.dmitrymalkovich.android:material-design-dimens:1.2",
+            "mqtt"                      : "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2"
+    ]
+}
