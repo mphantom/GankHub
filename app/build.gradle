@@ -39,7 +39,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile "junit:junit:4.12"
     androidTestCompile(rootProject.ext.library["espresso"], {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -50,6 +49,7 @@ dependencies {
     compile rootProject.ext.library["support-recyclerview"]
     compile rootProject.ext.library["rxandroid"]
     compile rootProject.ext.library["rxjava"]
+    compile rootProject.ext.library["constraint-layout"]
     compile rootProject.ext.library["gson"]
     compile rootProject.ext.library["retrofit"]
     compile rootProject.ext.library["retrofit-converter-scalars"]
@@ -59,4 +59,5 @@ dependencies {
     compile rootProject.ext.library["picasso"]
     apt rootProject.ext.library["apt-dagger"]
     compile rootProject.ext.library["dagger"]
+    testCompile 'junit:junit:4.12'
 }

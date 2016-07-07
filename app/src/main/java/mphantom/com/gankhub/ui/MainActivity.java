@@ -1,7 +1,9 @@
-package mphantom.com.gankhub;
+package mphantom.com.gankhub.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mphantom.com.gankhub.R;
 
 public class MainActivity extends AppCompatActivity {
 

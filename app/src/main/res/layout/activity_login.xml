@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_Login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_login"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_login"
+        app:layout_constraintRight_toRightOf="@+id/activity_login"
+        app:layout_constraintTop_toTopOf="@+id/activity_login"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_Login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="11dp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_Login_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_login"
+        app:layout_constraintRight_toRightOf="@+id/activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/til_Login_username">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_Login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pwd"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="11dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cb_lgoin_twosetp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two_setp_check"
+        app:layout_constraintLeft_toLeftOf="@+id/til_Login_username"
+        app:layout_constraintTop_toBottomOf="@+id/til_Login_pwd" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_login"
+        app:layout_constraintRight_toRightOf="@+id/activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/cb_lgoin_twosetp" />
+
+</android.support.constraint.ConstraintLayout>
