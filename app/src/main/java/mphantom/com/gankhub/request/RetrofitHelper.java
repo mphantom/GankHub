@@ -19,6 +19,7 @@ public class RetrofitHelper {
     private static final String BASE_URL = "https://api.53iq.com/1/";
     private Retrofit retrofit;
 
+
     private RetrofitHelper() {
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(new HttpLoggingInterceptor().setLevel(
