@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import mphantom.com.gankhub.BuildConfig;
-import mphantom.com.gankhub.request.RetrofitService;
+import mphantom.com.gankhub.request.GankService;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -20,7 +20,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 @Module
 public class RetrofitServiceModle {
-    public static final String BASE_URL = "http://gank.io/api/";
+    public static final String GITHUB_BASE_URL = "http://github.io/api/";
 
     @Provides
     @Singleton
@@ -37,9 +37,9 @@ public class RetrofitServiceModle {
 
     @Provides
     @Singleton
-    Retrofit provideRestAdapter(OkHttpClient client) {
+    Retrofit provideRetrofit(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(GITHUB_BASE_URL)
                 .client(client)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
@@ -50,7 +50,7 @@ public class RetrofitServiceModle {
 
     @Provides
     @Singleton
-    RetrofitService provideApiService(Retrofit retrofit) {
-        return retrofit.create(RetrofitService.class);
+    GankService provideGankService(Retrofit retrofit) {
+        return retrofit.create(GankService.class);
     }
 }

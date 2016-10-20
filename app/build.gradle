@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -46,6 +45,7 @@ dependencies {
     releaseCompile rootProject.ext.library["leakcanary-android-no-op"]
     testCompile rootProject.ext.library["leakcanary-android-no-op"]
     compile rootProject.ext.library["support-design"]
+    compile rootProject.ext.library["support-v7"]
     compile rootProject.ext.library["support-recyclerview"]
     compile rootProject.ext.library["rxandroid"]
     compile rootProject.ext.library["rxjava"]
@@ -57,7 +57,7 @@ dependencies {
     compile rootProject.ext.library["retrofit-rxjava"]
     compile rootProject.ext.library["okhttp-logging-interceptor"]
     compile rootProject.ext.library["picasso"]
-    apt rootProject.ext.library["apt-dagger"]
+    annotationProcessor rootProject.ext.library["apt-dagger"]
     compile rootProject.ext.library["dagger"]
     testCompile 'junit:junit:4.12'
 }

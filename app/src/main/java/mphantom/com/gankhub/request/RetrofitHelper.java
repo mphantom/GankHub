@@ -43,9 +43,9 @@ public class RetrofitHelper {
         return instance;
     }
 
-    public RetrofitService getRetrofitService() {
+    public GankService getRetrofitService() {
 
-        return this.retrofit.create(RetrofitService.class);
+        return this.retrofit.create(GankService.class);
     }
 
 }

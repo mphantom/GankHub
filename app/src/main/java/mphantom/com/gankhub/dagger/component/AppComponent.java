@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import mphantom.com.gankhub.dagger.modules.AppModule;
 import mphantom.com.gankhub.dagger.modules.RetrofitServiceModle;
-import mphantom.com.gankhub.request.RetrofitService;
+import mphantom.com.gankhub.request.GankService;
 
 /**
  * Created by wushaorong on 16-7-6.
@@ -19,5 +19,5 @@ public interface AppComponent {
 
     Context getContext();
 
-    RetrofitService getService();
+    GankService getService();
 }
